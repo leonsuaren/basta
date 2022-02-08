@@ -1,10 +1,11 @@
-import logo from './logo.svg';
 import './App.css';
+
+import { NumberPlayers } from './components/number-players';
 
 function App() {
   return (
     <div className="container">
-      <h1>hola</h1>
+      <NumberPlayers />
     </div>
   );
 }

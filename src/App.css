@@ -1,0 +1,9 @@
+.numPlayersWrapper {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  border: 1px solid #CCCCCC;
+  background-color: aqua;
+  width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+}
