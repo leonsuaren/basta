@@ -8,7 +8,7 @@ export const Navbar = () => {
   }, []);
 
   return (
-    <nav className='navbar nav justify-content-center'>
+    <nav data-test="navbar-component" className='navbar nav justify-content-center'>
       <h3 className='nav-link'>Basta</h3>
     </nav>
   )
