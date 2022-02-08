@@ -1,0 +1,1 @@
+export { BastaGame } from './BastaGame';

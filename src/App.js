@@ -1,13 +1,20 @@
 import './App.css';
 
-import { NumberPlayers } from './components/number-players';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Navbar } from './components/navbar';
+import { BastaOptions } from './views/basta-options';
+import { BastaGame } from './views/basta-game';
 
 function App() {
   return (
     <div className="container">
       <Navbar />
-      <NumberPlayers />
+      <Router>
+        <Routes>
+          <Route path='/' element={<BastaOptions />} />
+          <Route path='/basta-game' element={<BastaGame />} />
+        </Routes>
+      </Router>
     </div>
   );
 }
