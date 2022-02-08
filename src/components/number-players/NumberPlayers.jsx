@@ -1,14 +1,21 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
+import anime from 'animejs';
+import { numberPlayersAnimation } from './anime';
 
-export const NumberPlayers = () => {
+export const NumberPlayers = ({numPlayers = 1}) => {
+
+  useEffect(() => {
+    anime(numberPlayersAnimation);
+  }, []);
+
   return (
     <div className='numPlayersWrapper' data-test='number-players-component'>
       <h2>Players: </h2>
-      <div class="btn-group" role="group">
-        <button type="button" class="btn btn-primary">Two</button>
-        <button type="button" class="btn btn-primary">Three</button>
-        <button type="button" class="btn btn-primary">Four</button>
+      <div className="btn-group" role="group">
+        <button type="button" className="btn btn-primary">Two</button>
+        <button type="button" className="btn btn-primary">Three</button>
+        <button type="button" className="btn btn-primary">Four</button>
       </div>
     </div>
   );
