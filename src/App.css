@@ -11,4 +11,13 @@
 
 .navbar {
   opacity: 0;
+  background-color: #095fd6;
+}
+
+.brand {
+  color: #FFFFFF;
+}
+
+.brand:hover {
+  color: #FFFFFF;
 }

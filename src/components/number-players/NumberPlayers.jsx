@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import anime from 'animejs';
 import { numberPlayersAnimation } from './anime';
 
-export const NumberPlayers = ({numPlayers = 1}) => {
+export const NumberPlayers = () => {
 
   useEffect(() => {
     anime(numberPlayersAnimation);
