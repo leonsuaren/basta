@@ -50,4 +50,5 @@ body {
 
 .allSetButton {
   width: 500px;
+  opacity: 0;
 }

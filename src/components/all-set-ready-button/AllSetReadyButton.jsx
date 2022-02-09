@@ -5,7 +5,7 @@ export const AllSetReadyButton = () => {
 
   useEffect(() => {
     basicAnimationComponent('.buttonAnimation');
-  });
+  }, []);
 
   return (
     <div className='buttonWrapper'>
