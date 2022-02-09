@@ -1,3 +1,7 @@
+body {
+  background-image: url('./../public/letter-background.jpeg');
+}
+
 .numPlayersWrapper {
   display: grid;
   grid-template-columns: 30% 70%;
