@@ -9,6 +9,17 @@
   opacity: 0;
 }
 
+.playersNamesWrapper {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #CCCCCC;
+  background-color: #526c8e;
+  width: 500px;
+  margin: 10px auto;
+  padding: 20px;
+  opacity: 0;
+}
+
 .navbar {
   opacity: 0;
   background-color: #095fd6;

@@ -4,6 +4,6 @@ export const basicAnimationComponent = (element) => {
   anime({
     targets: `${element}`,
     opacity: 1,
-    duration: 20000
+    duration: 10000
   });
 };
