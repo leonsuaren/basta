@@ -3,10 +3,10 @@ import React, { createContext, useState } from 'react';
 export const BastaContext = createContext();
 
 export const BastaContextProvider = ({ children }) => {
-  const [ randomLetter, setRandomLetter ] = useState('m')
+    const [numPlayers, setNumPlayers] = React.useState(0);
 
   return(
-    <BastaContext.Provider value={{ randomLetter }}>
+    <BastaContext.Provider value={{ numPlayers, setNumPlayers }}>
       { children }
     </BastaContext.Provider>
   )
