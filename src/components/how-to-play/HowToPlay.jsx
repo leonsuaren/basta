@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { basicAnimationComponent } from '../../helpers/anime';
 
 export const HowToPlay = () => {
+
   useEffect(() => {
     basicAnimationComponent('.howToPlayButton')
   }, []);
