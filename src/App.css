@@ -2,9 +2,9 @@
   display: grid;
   grid-template-columns: 30% 70%;
   border: 1px solid #CCCCCC;
-  background-color: aqua;
+  background-color: #526c8e;
   width: 500px;
-  margin: 50px auto;
+  margin: 10px auto;
   padding: 20px;
   opacity: 0;
 }
@@ -20,4 +20,15 @@
 
 .brand:hover {
   color: #FFFFFF;
+}
+
+.buttonWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.howToPlayButton {
+  margin: 10px;
+  opacity: 0;
 }

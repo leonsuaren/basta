@@ -1,14 +1,14 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
-import anime from 'animejs';
-import { numberPlayersAnimation } from './anime';
+
+import { basicAnimationComponent } from '../../helpers/anime';
 
 export const NumberPlayers = () => {
   // const [numPlayersPicked, setNumPlayersPicked] = React.useState(false);
   const [numPlayers, setNumPlayers] = React.useState(0);
 
   useEffect(() => {
-    anime(numberPlayersAnimation);
+    basicAnimationComponent('.numPlayersWrapper');
   }, []);
 
   const handleOnPickTwoPlayers = () => {

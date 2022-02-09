@@ -23,40 +23,49 @@ test('does not throw an error with expected props', () => {
 });
 
 describe('if there are no number of players selected', () => {
-    test('renders without errors', () => {
+
+  test('renders without errors', () => {
     const wrapper = setup({ defaultProps });
     const component = wrapper.find('[data-test="number-players-component"]');
     expect(component.length).toBe(1);
   });
 
-  test('button three and four disabled ones button two players is selected', () => {
-    const wrapper = setup();
-    const buttonThree = wrapper.find('[data-test="button-three"]');
-    const buttonTwo = wrapper.find('[data-test="button-two"]');
-    // buttonTwo.simulate('click'); 
-    // expect(buttonThree).toBeDisabled() 
-  });
-
-  test('button four and two disabled ones button three players is selected', () => {
+  test('button two players is active', () => {
 
   });
 
-  test('button two and three disabled ones button foour players is selected', () => {
+  test('button three players is active', () => {
 
   });
-  test('reset button set numPlayers to 0', () => {
-      let mucksetNumPlayers = jest.fn();
-      React.useState = jest.fn(() => [1, mucksetNumPlayers]);
-      const wrapper = setup();
-      const resetButton = wrapper.find('[data-test="reset-button-component"]');
-      resetButton.simulate('click');
-      expect(mucksetNumPlayers).toHaveBeenCalledWith(0);
-  });
-  test('reset button makes button avalable again', () => {
+
+  test('button four players is active', () => {
 
   });
+
+  test('initial numPlayers state is 0', () => {
+    let mocksetNumPlayers = jest.fn();
+    React.useState = jest.fn(() => [0, mocksetNumPlayers]);
+
+    expect(mocksetNumPlayers).toHaveBeenCalledWith(0);
+  })
+
 });
 
 describe('if there are number of players selected', () => {
-
+  test('reset button set numPlayers to 0', () => {
+    let mucksetNumPlayers = jest.fn();
+    React.useState = jest.fn(() => [1, mucksetNumPlayers]);
+    const wrapper = setup();
+    const resetButton = wrapper.find('[data-test="reset-button-component"]');
+    resetButton.simulate('click');
+    expect(mucksetNumPlayers).toHaveBeenCalledWith(0);
+  });
 });
+
+// test('button three and four disabled ones button two players is selected', () => {
+//   const wrapper = setup();
+//   const buttonThree = wrapper.find('[data-test="button-three"]');
+//   const buttonTwo = wrapper.find('[data-test="button-two"]');
+//   // buttonTwo.simulate('click'); 
+//   expect(buttonThree).toBeDisabled()
+// });

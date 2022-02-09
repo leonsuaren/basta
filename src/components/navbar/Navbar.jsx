@@ -1,10 +1,9 @@
 import React, { useEffect } from 'react';
-import anime from 'animejs';
-import { navbarAnimation } from './anime';
+import { basicAnimationComponent } from '../../helpers/anime';
 
 export const Navbar = () => {
   useEffect(() => {
-    anime(navbarAnimation);
+    basicAnimationComponent('.navbar');
   }, []);
 
   return (
