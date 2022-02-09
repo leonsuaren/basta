@@ -13,10 +13,12 @@ export const BastaOptions = () => {
 
   return (
     <div>
-      <HowToPlay />
+      <div>
+        <HowToPlay />
+      </div>
       <NumberPlayers />
-      { numPlayersPicked ? <PlayersNames /> : '' }
-      { allSetUp ? <AllSetReadyButton /> : '' }
+      {numPlayersPicked ? <PlayersNames /> : ''}
+      {allSetUp ? <AllSetReadyButton /> : ''}
     </div>
   )
 };
