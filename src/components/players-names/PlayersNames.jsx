@@ -5,10 +5,15 @@ import { BastaContext } from '../../context/bastaContext';
 export const PlayersNames = () => {
   const bastaContext = useContext(BastaContext);
   const numPlayers = bastaContext.numPlayers;
-  console.log(numPlayers)
+ 
   useEffect(() => {
     basicAnimationComponent('.playersNamesWrapper');
   }, []);
+
+  const handleOnSubmit = (e) => {
+    e.preventDefault();
+    bastaContext.setAllSetUp(true);
+  };
 
   return (
     <div className='playersNamesWrapper'>
@@ -36,7 +41,7 @@ export const PlayersNames = () => {
             <input type='text' name='playerFour' placeholder='Player Four' className="form-control" />
           </div> : ''
         }
-        <button type="submit" class="btn btn-primary">Done With the Names!</button>
+        <button type="submit" className="btn btn-primary" onClick={handleOnSubmit}>Done With the Names!</button>
       </form>
     </div>
   )

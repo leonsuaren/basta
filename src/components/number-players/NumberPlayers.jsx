@@ -31,6 +31,7 @@ export const NumberPlayers = () => {
   const handleOnResetNumPlayers = () => {
     bastaContext.setNumPlayers(0);
     bastaContext.setNumPlayersPicked(false);
+    bastaContext.setAllSetUp(false);
   };
 
   return (
