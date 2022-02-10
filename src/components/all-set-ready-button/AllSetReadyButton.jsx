@@ -1,4 +1,6 @@
 import React, { useEffect, useContext } from 'react';
+import { Link } from 'react-router-dom';
+
 import { BastaContext } from '../../context/bastaContext';
 import { basicAnimationComponent } from '../../helpers/anime';
 
@@ -9,9 +11,16 @@ export const AllSetReadyButton = () => {
     basicAnimationComponent('.buttonAnimation');
   }, []);
 
+  const handleOnClick = () => {
+    bastaContext.setAllSetUp(false);
+    bastaContext.setNumPlayersPicked(false);
+  }
+
   return (
     <div className='buttonWrapper'>
-      <button className='btn btn-danger btn-lg buttonAnimation allSetButton'>All Set! Ready?</button>
+      <Link to='/basta-game'>
+        <button className='btn btn-danger btn-lg buttonAnimation allSetButton' onClick={handleOnClick}>All Set! Ready?</button>
+      </Link>
     </div>
   )
 };

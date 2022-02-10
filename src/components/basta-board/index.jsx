@@ -1,0 +1,1 @@
+export { BastaBoard } from './BastaBoard';

@@ -48,7 +48,7 @@ export const PlayersNames = () => {
       <form onSubmit={handleOnSubmit}>
         <div className='mb-3'>
           <label htmlFor='playerOne' className="form-label"> Player One: </label>
-          <input ref={playerOneRef} type='text' name='playerOne' placeholder='Player One' className="form-control" />
+          <input ref={playerOneRef} type='text' name='playerOne' placeholder='Player One' className="form-control"/>
         </div>
         {numPlayers === 2 || numPlayers === 3 || numPlayers === 4 ?
           <div className='mb-3'>
