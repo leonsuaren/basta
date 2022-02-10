@@ -3,6 +3,7 @@ import { BastaContext } from '../../context/bastaContext';
 
 import { NumberPlayers } from '../../components/number-players';
 import { HowToPlay } from '../../components/how-to-play';
+import { HowScoreWorks } from '../../components/how-score-works';
 import { PlayersNames } from '../../components/players-names';
 import { AllSetReadyButton } from '../../components/all-set-ready-button';
 
@@ -13,8 +14,9 @@ export const BastaOptions = () => {
 
   return (
     <div>
-      <div>
+      <div className='buttonWrapper'>
         <HowToPlay />
+        <HowScoreWorks />
       </div>
       <NumberPlayers />
       {numPlayersPicked ? <PlayersNames /> : ''}

@@ -32,6 +32,7 @@ export const NumberPlayers = () => {
     bastaContext.setNumPlayers(0);
     bastaContext.setNumPlayersPicked(false);
     bastaContext.setAllSetUp(false);
+    bastaContext.setPlayersNames({});
   };
 
   return (

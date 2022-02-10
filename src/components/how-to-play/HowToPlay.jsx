@@ -9,7 +9,7 @@ export const HowToPlay = () => {
 
   return (
     <div className='buttonWrapper'>
-      <button className='howToPlayButton btn btn-info' type='button' data-bs-toggle="modal" data-bs-target="#Modal">How to Play!!</button>
+      <button className='howToPlayButton btn btn-info' type='button' data-bs-toggle="modal" data-bs-target="#Modal">How to Play?</button>
       <div className="modal fade " id="Modal" tabIndex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
         <div className="modal-dialog">
           <div className="modal-content">
@@ -25,7 +25,7 @@ export const HowToPlay = () => {
               <li>You can click on the reset button at any time in case you want to change the number of players</li>
               <li>Ones you choose the number of players the system will ask you to write a name for each of the players</li>
               <li>After that a start button will appear at the botton of the screen (All set!! Ready?)</li>
-              <li>Once you click on the button the game will start</li>
+              <li>Once you click on the button (All set!! Ready?) the game will start</li>
              </ul>  
             </div>
             <div className="modal-footer">

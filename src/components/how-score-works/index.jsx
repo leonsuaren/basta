@@ -1,0 +1,1 @@
+export { HowScoreWorks } from './HowScoreWorks';

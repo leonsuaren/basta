@@ -1,7 +1,9 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useContext } from 'react';
+import { BastaContext } from '../../context/bastaContext';
 import { basicAnimationComponent } from '../../helpers/anime';
 
 export const AllSetReadyButton = () => {
+  const bastaContext = useContext(BastaContext);
 
   useEffect(() => {
     basicAnimationComponent('.buttonAnimation');
