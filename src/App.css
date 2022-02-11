@@ -82,3 +82,9 @@ body {
   border: 1px solid #CCCCCC;
   background-color: #526c8e;
 }
+
+.bastaWordAndPoints {
+  display: grid;
+  grid-template-columns: 50% 25% 25%;
+  justify-items: center;
+}

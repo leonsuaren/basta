@@ -1,5 +1,4 @@
-import React, { useEffect, useContext, useRef, useState } from 'react';
-import { useFormik } from 'formik';
+import React, { useEffect, useContext, useRef } from 'react';
 
 import { basicAnimationComponent } from '../../helpers/anime';
 import { BastaContext } from '../../context/bastaContext';

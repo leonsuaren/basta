@@ -20,11 +20,11 @@ export const HowScoreWorks = () => {
             <div className="modal-body">
              <h3>Let's make the rules!!</h3> 
              <ul>
-              <li>No repeated words: 50 pts.</li>
-              <li>Repeated words: 25 pts.</li>
-              <li>Only one players write a word: 100 pts.</li>
-              <li>No word: 0 pts.</li>
-              <li>Everybody write the same word: 0 pts.</li>
+             <li>Only one players write a word: 100 pts. <button className='btn btn-primary'/></li>
+              <li>No repeated words: 50 pts. <button className='btn btn-success'/></li>
+              <li>Repeated words: 25 pts. <button className='btn btn-warning'/></li>
+              <li>No word: 0 pts. <button className='btn btn-danger'/></li>
+              <li>Everybody write the same word: 0 pts. <button className='btn btn-danger'/></li>
              </ul>  
             </div>
             <div className="modal-footer">
