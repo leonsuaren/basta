@@ -15,8 +15,8 @@ export const BastaBoard = () => {
             <span className="input-group-text" id="inputGroup-sizing-sm">Country</span>
             <input className="form-control" />
           </div>
-          <div>flag</div>
-          <div>points</div>
+          <button className='flag btn btn-primary'/>
+          <div>100</div>
         </div>
         <div className='bastaWordAndPoints'>
           <div className='input-group input-group-sm mb-3'>
