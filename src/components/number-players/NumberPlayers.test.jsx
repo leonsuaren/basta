@@ -31,7 +31,9 @@ describe('if there are no number of players selected', () => {
   });
 
   test('button two players is active', () => {
-
+    const wrapper = setup();
+    const buttonTwoComponent = wrapper.find("[data-test='button-two']");
+    expect(buttonTwoComponent.length).toBe(1)
   });
 
   test('button three players is active', () => {
