@@ -6,6 +6,7 @@ import { HowToPlay } from '../../components/how-to-play';
 import { HowScoreWorks } from '../../components/how-score-works';
 import { PlayersNames } from '../../components/players-names';
 import { AllSetReadyButton } from '../../components/all-set-ready-button';
+import { Directions } from '../../components/directions';
 
 export const BastaOptions = () => {
   const bastaContext = React.useContext(BastaContext);
@@ -15,6 +16,7 @@ export const BastaOptions = () => {
   return (
     <div>
       <div className='buttonWrapper'>
+        <Directions />
         <HowToPlay />
         <HowScoreWorks />
       </div>
