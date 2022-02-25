@@ -3,8 +3,8 @@ import React from 'react';
 export const Directions = () => {
   return (
     <div className='howToPlayButton'>
-      <button className='howScoreWorksButtonAnimation btn btn-info' type='button' data-bs-toggle="modal" data-bs-target="#ModalScore">Directions</button>
-      <div className="modal fade " id="ModalScore" tabIndex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+      <button className='howScoreWorksButtonAnimation btn btn-info' type='button' data-bs-toggle="modal" data-bs-target="#ModalDirections">Directions</button>
+      <div className="modal fade " id="ModalDirections" tabIndex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
         <div className="modal-dialog">
           <div className="modal-content">
             <div className="modal-header">
