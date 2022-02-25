@@ -7,8 +7,7 @@ import { basicAnimationComponent } from '../../helpers/anime';
 
 export const NumberPlayers = () => {
   const bastaContext = React.useContext(BastaContext);
-  let numPlayers 
-  // = bastaContext.numPlayers;
+  let numPlayers = bastaContext.numPlayers;
 
   useEffect(() => {
     basicAnimationComponent('.numPlayersWrapper');
