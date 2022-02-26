@@ -81,6 +81,13 @@ export const PlayersNames = () => {
     return errors;
   }
   const formik = useFormik({
+    // initialValues: {
+    //   playerOne: 'Player One',
+    //   playerTwo: 'Player Two',
+    //   playerThree: 'Player Three',
+    //   playerFour: 'Player Four'
+    // },
+    // validate,
     initialValues: {
       playerOne: '',
       playerTwo: '',
@@ -105,19 +112,22 @@ export const PlayersNames = () => {
         {numPlayers === 2 || numPlayers === 3 || numPlayers === 4 ?
           <div className='mb-3'>
             <label htmlFor='playerOne' className="form-label"> Player Two: </label>
-            <input type='text' name='playerTwo' placeholder='Player tow' className="form-control" onChange={formik.handleChange} value={formik.values.playerTwo} defaultValue='user'/>
+            <input type='text' name='playerTwo' placeholder='Player two' className="form-control" onChange={formik.handleChange} value={formik.values.playerTwo} defaultValue='user'/>
+            {formik.errors.playerTwo ? <div className='nameError'>{formik.errors.playerTwo}</div> : ''}
           </div> : ''
         }
         {numPlayers === 3 || numPlayers === 4 ?
           <div className='mb-3'>
             <label htmlFor='playerOne' className="form-label"> Player Three: </label>
             <input type='text' name='playerThree' placeholder='Player Three' className="form-control" onChange={formik.handleChange} value={formik.values.playerThree} defaultValue='user'/>
+            {formik.errors.playerThree ? <div className='nameError'>{formik.errors.playerThree}</div> : ''}
           </div> : ''
         }
         {numPlayers === 4 ?
           <div className='mb-3'>
             <label htmlFor='playerOne' className="form-label"> Player Four: </label>
             <input type='text' name='playerFour' placeholder='Player Four' className="form-control" onChange={formik.handleChange} value={formik.values.playerFour} defaultValue='user'/>
+            {formik.errors.playerFour ? <div className='nameError'>{formik.errors.playerFour}</div> : ''}
           </div> : ''
         }
         <button type="submit" className="btn btn-primary">Done With the Names!</button>
