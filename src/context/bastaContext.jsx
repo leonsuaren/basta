@@ -14,7 +14,7 @@ export const BastaContextProvider = ({ children }) => {
   const randomLetter = letters[random];
 
   return (
-    <BastaContext.Provider value={{ numPlayers, numPlayersPicked, allSetUp, playersNames, setNumPlayers, setNumPlayersPicked, setAllSetUp, setPlayersNames }}>
+    <BastaContext.Provider value={{ numPlayers, numPlayersPicked, allSetUp, playersNames, randomLetter, setNumPlayers, setNumPlayersPicked, setAllSetUp, setPlayersNames }}>
       {children}
     </BastaContext.Provider>
   )

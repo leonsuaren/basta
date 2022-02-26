@@ -81,19 +81,19 @@ export const PlayersNames = () => {
     return errors;
   }
   const formik = useFormik({
-    // initialValues: {
-    //   playerOne: 'Player One',
-    //   playerTwo: 'Player Two',
-    //   playerThree: 'Player Three',
-    //   playerFour: 'Player Four'
-    // },
-    // validate,
     initialValues: {
-      playerOne: '',
-      playerTwo: '',
-      playerThree: '',
-      playerFour: ''
+      playerOne: 'Player One',
+      playerTwo: 'Player Two',
+      playerThree: 'Player Three',
+      playerFour: 'Player Four'
     },
+    validate,
+    // initialValues: {
+    //   playerOne: '',
+    //   playerTwo: '',
+    //   playerThree: '',
+    //   playerFour: ''
+    // },
     onSubmit: values => {
       bastaContext.setPlayersNames(values)
       bastaContext.setAllSetUp(true)
