@@ -1,19 +1,27 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useContext } from 'react';
+import { BastaContext } from '../../context/bastaContext';
+
 import { basicAnimationComponent } from '../../helpers/anime';
 
 export const Score = ({ round }) => {
+  const bastaContext = useContext(BastaContext);
+  const numPlayers = bastaContext.numPlayers;
+
+  console.log(round)
 
   useEffect(() => {
     basicAnimationComponent('.scoreAnimation');
   }, []);
-  console.log(round)
-  return(
+  return (
     <div className='scoreAnimation scoreWrapper'>
-    <div>{round.round}</div>
-    <div>Player One</div>
-    <div>Player Two</div>
-    <div>Player Three</div>
-    <div>Player Four</div>
+      <div>
+        <div>{round.round}</div>
+        <div>Letter: {round.letterToPlay}</div>
+      </div>
+      <div>Player One</div>
+      <div>Player Two</div>
+      {numPlayers >= 3 ? <div>Player Three</div> : ''}
+      {numPlayers === 4 ? <div>Player Four</div> : ''}
     </div>
   )
 }
