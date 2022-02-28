@@ -11,13 +11,18 @@ export const BastaGame = () => {
   const lettersToPlay = bastaContext.lettersToPlay;
   const playersNames = bastaContext.playersNames;
   const [showCounter, setShowCounter] = React.useState(true);
+  const [playerOneTurn, setPlayerOneTurn] = React.useState(false);
+  const [playerTwoTurn, setPlayerTwoTurn] = React.useState(false);
+  const [playerThreeTurn, setPlayerThreeTurn] = React.useState(false);
+  const [playerFourTurn, setPlayerFourTurn] = React.useState(false);
+  const [inputDisabled, setInputDisabled] = React.useState(false);
   const [round, setRound] = React.useState({});
   const [roundOne, setRoundOne] = React.useState(
     {
       active: false,
       round: 'Round One',
       letterToPlay: lettersToPlay[0],
-      playerOne: playersNames.playerOne,
+      playerOne: [playersNames.playerOne, playerOneTurn],
       playerTwo: playersNames.playerTwo,
       playerThree: playersNames.playerThree,
       playerFour: playersNames.playerFour
@@ -48,23 +53,45 @@ export const BastaGame = () => {
 
   useEffect(() => {
     setRound(roundOne);
+    setPlayerOneTurn(true);
     setTimeout(() => {
       setShowCounter(false);
     }, 5000);
-    setTimeout(() => {
-      setRound(roundTwo)
-    }, 36000);
+    if (numPlayers === 2) {
+      setTimeout(() => {
+        setPlayerOneTurn(false);
+        setPlayerTwoTurn(true);
+        setShowCounter(true)
+      }, 35000);
+      setTimeout(() => {
+        setShowCounter(false);
+      }, 40000)
+      setTimeout(() => {
+        setPlayerOneTurn(true);
+        setPlayerTwoTurn(true);
+        setInputDisabled(true);
+      }, 70000);
+    }
+    // if (numPlayers === 3) {
+    //   setTimeout(() => {
+    //     setPlayerOneTurn(false);
+    //     setPlayerTwoTurn(true);
+    //   }, 65000);
+    // }
+    // setTimeout(() => {
+    //   setRound(roundTwo)
+    // }, 36000);
 
   }, []);
   return (
     <div>
       {showCounter && <Counter round={round} />}
-      <Score round={round}  />
+      <Score round={round} />
       <div className="bastaGameContainer">
-        <BastaBoard />
-        <BastaBoard />
-        {numPlayers >= 3 ? <BastaBoard /> : ''}
-        {numPlayers === 4 ? <BastaBoard /> : ''}
+        {playerOneTurn && <div><BastaBoard name={round.playerOne} disabled={inputDisabled} /></div>}
+        {playerTwoTurn && <div><BastaBoard name={round.playerTwo} disabled={inputDisabled} /></div>}
+        {playerThreeTurn && <div>{numPlayers >= 3 ? <BastaBoard name={round.playerThree} disabled={inputDisabled}/> : ''}</div>}
+        {playerFourTurn && <div>{numPlayers === 4 ? <BastaBoard name={round.playerFour} disabled={inputDisabled}/> : ''}</div>}
       </div>
       <div className='footerRules'>
         <ul>

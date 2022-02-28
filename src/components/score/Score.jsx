@@ -18,10 +18,10 @@ export const Score = ({ round }) => {
         <div>{round.round}</div>
         <div>Letter: {round.letterToPlay}</div>
       </div>
-      <div>Player One</div>
-      <div>Player Two</div>
-      {numPlayers >= 3 ? <div>Player Three</div> : ''}
-      {numPlayers === 4 ? <div>Player Four</div> : ''}
+      <div>{round.playerOne}'s score</div>
+      <div>{round.playerTwo}'s score</div>
+      {numPlayers >= 3 ? <div>{round.playerThree}'s score</div> : ''}
+      {numPlayers === 4 ? <div>{round.playerFour}'s score</div> : ''}
     </div>
   )
 }
