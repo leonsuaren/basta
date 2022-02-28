@@ -1,10 +1,13 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useContext } from 'react';
+import { BastaContext } from '../../context/bastaContext';
 
 import { BastaBoard } from '../../components/basta-board';
 import { Score } from '../../components/score';
 import { Counter } from '../../components/counter';
 
 export const BastaGame = () => {
+  const bastaContext = useContext(BastaContext);
+  const numPlayers = bastaContext.numPlayers;
   const [showCounter, setShowCounter] = React.useState(true);
   const [round, setRound] = React.useState({});
   const [roundOne, setRoundOne] = React.useState(
@@ -25,6 +28,7 @@ export const BastaGame = () => {
       round: 'Round Three'
     }
   );
+    console.log(numPlayers);
 
   useEffect(() => {
     setRound(roundOne);
@@ -43,8 +47,8 @@ export const BastaGame = () => {
       <div className="bastaGameContainer">
         <BastaBoard />
         <BastaBoard />
-        <BastaBoard />
-        <BastaBoard />
+        {numPlayers >= 3 ? <BastaBoard /> : ''}
+        {numPlayers === 4 ? <BastaBoard /> : ''}
       </div>
       <div className='footerRules'>
         <ul>
