@@ -9,27 +9,40 @@ export const BastaGame = () => {
   const bastaContext = useContext(BastaContext);
   const numPlayers = bastaContext.numPlayers;
   const lettersToPlay = bastaContext.lettersToPlay;
+  const playersNames = bastaContext.playersNames;
   const [showCounter, setShowCounter] = React.useState(true);
   const [round, setRound] = React.useState({});
   const [roundOne, setRoundOne] = React.useState(
     {
       active: false,
       round: 'Round One',
-      letterToPlay: lettersToPlay[0]
+      letterToPlay: lettersToPlay[0],
+      playerOne: playersNames.playerOne,
+      playerTwo: playersNames.playerTwo,
+      playerThree: playersNames.playerThree,
+      playerFour: playersNames.playerFour
     }
   );
   const [roundTwo, setRoundTwo] = React.useState(
     {
       active: false,
       round: 'Round Two',
-      letterToPlay: lettersToPlay[1]
+      letterToPlay: lettersToPlay[1],
+      playerOne: playersNames.playerOne,
+      playerTwo: playersNames.playerTwo,
+      playerThree: playersNames.playerThree,
+      playerFour: playersNames.playerFour
     }
   );
   const [roundThree, setRoundThree] = React.useState(
     {
       active: false,
       round: 'Round Three',
-      letterToPlay: lettersToPlay[2]
+      letterToPlay: lettersToPlay[2],
+      playerOne: playersNames.playerOne,
+      playerTwo: playersNames.playerTwo,
+      playerThree: playersNames.playerThree,
+      playerFour: playersNames.playerFour
     }
   );
 
@@ -37,7 +50,7 @@ export const BastaGame = () => {
     setRound(roundOne);
     setTimeout(() => {
       setShowCounter(false);
-    }, 6000);
+    }, 5000);
     setTimeout(() => {
       setRound(roundTwo)
     }, 36000);

@@ -27,8 +27,6 @@ export const BastaContextProvider = ({ children }) => {
     setLettersToPlay(lettersArray)
   }, []);
 
-  console.log(lettersToPlay);
-
   return (
     <BastaContext.Provider value={{ numPlayers, numPlayersPicked, allSetUp, playersNames, lettersToPlay, setNumPlayers, setNumPlayersPicked, setAllSetUp, setPlayersNames }}>
       {children}
