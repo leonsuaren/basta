@@ -6,17 +6,40 @@ import { Counter } from '../../components/counter';
 
 export const BastaGame = () => {
   const [showCounter, setShowCounter] = React.useState(true);
+  const [round, setRound] = React.useState({});
+  const [roundOne, setRoundOne] = React.useState(
+    {
+      active: false,
+      round: 'Round One'
+    }
+  );
+  const [roundTwo, setRoundTwo] = React.useState(
+    {
+      active: false,
+      round: 'Round Two'
+    }
+  );
+  const [roundThree, setRoundThree] = React.useState(
+    {
+      active: false,
+      round: 'Round Three'
+    }
+  );
 
   useEffect(() => {
+    setRound(roundOne);
     setTimeout(() => {
       setShowCounter(false);
-    }, 5000);
-  }, []);
+    }, 6000);
+    setTimeout(() => {
+      setRound(roundTwo)
+    }, 36000);
 
+  }, []);
   return (
     <div>
       {showCounter && <Counter />}
-      <Score />
+      <Score round={round} />
       <div className="bastaGameContainer">
         <BastaBoard />
         <BastaBoard />
